@@ -1,0 +1,14 @@
+server:
+  grpc_port: 50052
+  http_port: 8082
+
+database:
+  host: 192.168.100.108
+  port: 5432
+  user: inidaname
+  password: FarhanNana
+  dbname: mosque
+  schema: public
+  max_connections: 10
+  sslmode: disable
+  url: "postgresql://inidaname:FarhanNana@192.168.100.108:5432/mosque?sslmode=disable"
