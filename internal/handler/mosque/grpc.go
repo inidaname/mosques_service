@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/inidaname/mosque/mosques-service/internal/service"
-	"github.com/inidaname/mosque/protos"
+	"github.com/inidaname/mosque_location/protos"
 	"google.golang.org/grpc"
 )
 

@@ -6,7 +6,7 @@ import (
 	db "github.com/inidaname/mosque/mosques-service/internal/db/models"
 	"github.com/inidaname/mosque/mosques-service/internal/helpers"
 	"github.com/inidaname/mosque/mosques-service/internal/types"
-	"github.com/inidaname/mosque/protos"
+	"github.com/inidaname/mosque_location/protos"
 	"github.com/jackc/pgx/v5/pgtype"
 )
 
