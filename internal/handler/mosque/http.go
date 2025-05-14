@@ -24,6 +24,7 @@ func (h *MosqueHttpHandler) RegisterRouter(router *http.ServeMux) {
 	router.HandleFunc("POST /mosque", h.CreateMosque)
 	router.HandleFunc("GET /mosque", h.ListMosque)
 	router.HandleFunc("PUT /mosque", h.UpdateMosque)
+	router.HandleFunc("GET /health", h.Health)
 }
 
 func (h *MosqueHttpHandler) CreateMosque(w http.ResponseWriter, r *http.Request) {
@@ -76,4 +77,8 @@ func (h *MosqueHttpHandler) UpdateMosque(w http.ResponseWriter, r *http.Request)
 
 	util.WriteJSON(w, http.StatusOK, resp)
 
+}
+
+func (h *MosqueHttpHandler) Health(w http.ResponseWriter, r *http.Request) {
+	util.WriteJSON(w, http.StatusOK, "")
 }

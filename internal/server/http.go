@@ -21,10 +21,10 @@ func (s *httpServer) Run() error {
 	router := http.NewServeMux()
 
 	mosqueService := service.NewMosqueService(&s.app)
-	authHandler := handler.NewHttpMosqueService(*mosqueService)
-	authHandler.RegisterRouter(router)
+	mosqueHandler := handler.NewHttpMosqueService(*mosqueService)
+	mosqueHandler.RegisterRouter(router)
 
-	log.Println("Starting server on", s.app.Config.Server.HTTPPort)
+	log.Println("Starting server on", ":"+s.app.Config.Server.HTTPPort)
 
-	return http.ListenAndServe(s.app.Config.Server.HTTPPort, router)
+	return http.ListenAndServe(":"+s.app.Config.Server.HTTPPort, router)
 }
